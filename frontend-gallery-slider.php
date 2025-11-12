@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Meta Slider and Carousel with Lightbox
- * Plugin URI: https://www.essentialplugin.com/wordpress-plugin/meta-slider-carousel-lightbox/
+ * Plugin URI: https://essentialplugin.com/wordpress-plugin/meta-slider-carousel-lightbox/
  * Description: Plugin add a gallery meta box in your post, page and create a Image gallery menu tab. Display with a lightbox. Also work with Gutenberg shortcode block.
  * Author: Essential Plugin
  * Text Domain: meta-slider-and-carousel-with-lightbox
  * Domain Path: /languages/
- * Version: 2.0.6
- * Author URI: https://www.essentialplugin.com
+ * Version: 2.0.7
+ * Author URI: https://essentialplugin.com
  *
  * @package Meta Slider and Carousel with Lightbox
  * @author Essential Plugin
@@ -17,36 +17,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if( ! defined( 'WP_IGSP_VERSION' ) ) {
-	define( 'WP_IGSP_VERSION', '2.0.6' ); // Version of plugin
+if ( ! defined( 'WP_IGSP_VERSION' ) ) {
+	define( 'WP_IGSP_VERSION', '2.0.7' ); // Version of plugin
 }
 
-if( ! defined( 'WP_IGSP_DIR' ) ) {
+if ( ! defined( 'WP_IGSP_DIR' ) ) {
 	define( 'WP_IGSP_DIR', dirname( __FILE__ ) ); // Plugin dir
 }
 
-if( ! defined( 'WP_IGSP_URL' ) ) {
+if ( ! defined( 'WP_IGSP_URL' ) ) {
 	define( 'WP_IGSP_URL', plugin_dir_url( __FILE__ ) ); // Plugin url
 }
 
-if( ! defined( 'WP_IGSP_POST_TYPE' ) ) {
+if ( ! defined( 'WP_IGSP_POST_TYPE' ) ) {
 	define( 'WP_IGSP_POST_TYPE', 'wp_igsp_gallery' ); // Plugin post type
 }
 
-if( ! defined( 'WP_IGSP_META_PREFIX' ) ) {
+if ( ! defined( 'WP_IGSP_META_PREFIX' ) ) {
 	define( 'WP_IGSP_META_PREFIX', '_wp_igsp_' ); // Plugin metabox prefix
 }
 
-if( ! defined( 'WP_IGSP_PLUGIN_LINK_UPGRADE' ) ) {
-	define( 'WP_IGSP_PLUGIN_LINK_UPGRADE','https://www.essentialplugin.com/pricing/?utm_source=WP&utm_medium=Meta-Slider&utm_campaign=Upgrade-PRO' ); // Plugin Check link
+if ( ! defined( 'WP_IGSP_PLUGIN_LINK_UPGRADE' ) ) {
+	define( 'WP_IGSP_PLUGIN_LINK_UPGRADE','https://essentialplugin.com/pricing/?utm_source=WP&utm_medium=Meta-Slider&utm_campaign=Upgrade-PRO' ); // Plugin Check link
 }
 
-if( ! defined( 'WP_IGSP_PLUGIN_BUNDLE_LINK' ) ) {
-	define('WP_IGSP_PLUGIN_BUNDLE_LINK', 'https://www.essentialplugin.com/pricing/?utm_source=WP&utm_medium=Meta-Slider&utm_campaign=Welcome-Screen'); // Plugin link
+if ( ! defined( 'WP_IGSP_PLUGIN_BUNDLE_LINK' ) ) {
+	define('WP_IGSP_PLUGIN_BUNDLE_LINK', 'https://essentialplugin.com/pricing/?utm_source=WP&utm_medium=Meta-Slider&utm_campaign=Welcome-Screen'); // Plugin link
 }
 
-if( ! defined( 'WP_IGSP_PLUGIN_LINK_UNLOCK' ) ) {
-	define('WP_IGSP_PLUGIN_LINK_UNLOCK', 'https://www.essentialplugin.com/pricing/?utm_source=WP&utm_medium=Meta-Slider&utm_campaign=Features-PRO'); // Plugin link
+if ( ! defined( 'WP_IGSP_PLUGIN_LINK_UNLOCK' ) ) {
+	define('WP_IGSP_PLUGIN_LINK_UNLOCK', 'https://essentialplugin.com/pricing/?utm_source=WP&utm_medium=Meta-Slider&utm_campaign=Features-PRO'); // Plugin link
 }
 
 /**
@@ -117,7 +117,7 @@ function wp_igsp_install() {
 	flush_rewrite_rules();
 
 	// Deactivate pro version
-	if( is_plugin_active('meta-slider-and-carousel-with-lightbox-pro/frontend-gallery-slider.php') ) {
+	if ( is_plugin_active('meta-slider-and-carousel-with-lightbox-pro/frontend-gallery-slider.php') ) {
 		add_action('update_option_active_plugins', 'wp_igsp_deactivate_pro_version');
 	}
 }
@@ -153,14 +153,14 @@ function wp_igsp_admin_notice() {
 	global $pagenow;
 
 	// If not plugin screen
-	if( 'plugins.php' != $pagenow ) {
+	if ( 'plugins.php' != $pagenow ) {
 		return;
 	}
 
 	// Check Lite Version
 	$dir = plugin_dir_path( __DIR__ ) . 'meta-slider-and-carousel-with-lightbox-pro/frontend-gallery-slider.php';
 
-	if( ! file_exists( $dir ) ) {
+	if ( ! file_exists( $dir ) ) {
 		return;
 	}
 
@@ -168,7 +168,7 @@ function wp_igsp_admin_notice() {
 	$notice_transient	= get_transient( 'wp_igsp_install_notice' );
 
 	// If free plugin exist
-	if( $notice_transient == false && current_user_can( 'install_plugins' ) ) {
+	if ( $notice_transient == false && current_user_can( 'install_plugins' ) ) {
 		  echo '<div class="updated notice" style="position:relative;">
 				<p>
 					<strong>'.sprintf( __('Thank you for activating %s', 'meta-slider-and-carousel-with-lightbox'), 'Meta slider and Carousel with lightbox').'</strong>.<br/>
@@ -204,7 +204,7 @@ if ( function_exists( 'register_block_type' ) ) {
 }
 
 /* Plugin Wpos Analytics Data Starts */
-if( ! function_exists( 'wpos_analytics_anl39_load' ) ) {
+if ( ! function_exists( 'wpos_analytics_anl39_load' ) ) {
 	function wpos_analytics_anl39_load() {
 
 		require_once dirname( __FILE__ ) . '/wpos-analytics/wpos-analytics.php';

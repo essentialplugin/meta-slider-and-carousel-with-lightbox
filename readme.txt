@@ -2,8 +2,8 @@
 Contributors: essentialplugin
 Tags: frontend gallery slider, frontend gallery Carousel, meta gallery image slider, meta gallery image carousel, gallery slider
 Requires at least: 4.0
-Tested up to: 6.8.1
-Stable tag: 2.0.6
+Tested up to: 6.8.3
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -143,6 +143,9 @@ Where designs are : design-1. You can use same parameter with Carousel shortcode
 6. Also work with Gutenberg shortcode block.
 
 == Changelog == 
+
+= 2.0.7 (12, Nov 2025) =
+* [*] Check compatibility with WordPress version 6.8.3
 
 = 2.0.6 (16, May 2025) =
 * [*] Updated some URL's
