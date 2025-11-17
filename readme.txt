@@ -144,6 +144,9 @@ Where designs are : design-1. You can use same parameter with Carousel shortcode
 
 == Changelog == 
 
+= 2.0.8 (17, Nov 2025) =
+* [*] Fixed code conflict issue affecting widget saving.
+
 = 2.0.7 (12, Nov 2025) =
 * [*] Check compatibility with WordPress version 6.8.3
 

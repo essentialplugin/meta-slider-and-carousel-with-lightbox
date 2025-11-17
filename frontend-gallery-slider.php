@@ -6,7 +6,7 @@
  * Author: Essential Plugin
  * Text Domain: meta-slider-and-carousel-with-lightbox
  * Domain Path: /languages/
- * Version: 2.0.7
+ * Version: 2.0.8
  * Author URI: https://essentialplugin.com
  *
  * @package Meta Slider and Carousel with Lightbox
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'WP_IGSP_VERSION' ) ) {
-	define( 'WP_IGSP_VERSION', '2.0.7' ); // Version of plugin
+	define( 'WP_IGSP_VERSION', '2.0.8' ); // Version of plugin
 }
 
 if ( ! defined( 'WP_IGSP_DIR' ) ) {
